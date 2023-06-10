@@ -11,11 +11,11 @@ public class DBManager {
         this.conn = this.getConnection();
     }
 
-    // 获取连接对象
+    // 鑾峰彇杩炴帴瀵硅薄
     private Connection getConnection() {
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            System.out.println("驱动加载正常");
+            System.out.println("椹卞姩鍔犺浇姝ｅ父");
             String user = "sa";
             String password = "plb123plb";
             String uri = "jdbc:sqlserver://127.0.0.1:1433;DatabaseName=exam;trustServerCertificate=true";
@@ -23,43 +23,43 @@ public class DBManager {
         } catch (ClassNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-            System.out.println("驱动程序加载异常");
+            System.out.println("椹卞姩绋嬪簭鍔犺浇寮傚父");
 
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-            System.out.println("获取连接错误");
+            System.out.println("鑾峰彇杩炴帴閿欒");
         }
 
         return conn;
     }
 
-    //查询方法
+    //鏌ヨ鏂规硶
     public ResultSet executeQuery(String sql) {
         try {
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
         } catch (SQLException e) {
-            System.out.println("SQL执行查询错误");
-            e.printStackTrace();//打印堆栈跟踪
+            System.out.println("SQL鎵ц鏌ヨ閿欒");
+            e.printStackTrace();//鎵撳嵃鍫嗘爤璺熻釜
         }
         return rs;
     }
 
-    //更新方法
+    //鏇存柊鏂规硶
     public int executeUpdate(String sql) {
         int count = 0;
         try {
             stmt = conn.createStatement();
             count = stmt.executeUpdate(sql);
         } catch (SQLException e) {
-            System.out.println("SQL执行更新错误");
-            e.printStackTrace();//打印堆栈跟踪
+            System.out.println("SQL鎵ц鏇存柊閿欒");
+            e.printStackTrace();//鎵撳嵃鍫嗘爤璺熻釜
         }
         return count;
     }
 
-    // 释放资源
+    // 閲婃斁璧勬簮
     public void releaseResource() {
         try {
             if (rs != null) rs.close();

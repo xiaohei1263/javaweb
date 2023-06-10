@@ -6,7 +6,6 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 import xiaohei.Dao.UserDao;
 import xiaohei.model.UserModel;
 
@@ -44,11 +43,10 @@ public class UserServlet extends HttpServlet {
         boolean flag = userdao.LoginUser(usermodel);
 
         if (!flag) {
-            HttpSession session = request.getSession();
-            session.setAttribute("errorMsg","ÕËºÅ»òÃÜÂë´íÎó£¡");
-            request.getRequestDispatcher("/Login.jsp").forward(request, response);
+            request.setAttribute("message","è´¦å·æˆ–å¯†ç é”™è¯¯ï¼");
+            request.getRequestDispatcher("student/Login/Login.jsp").forward(request, response);
         } else {
-            RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("student/Query/index.jsp");
             rd.forward(request, response);
         }
     }
@@ -62,10 +60,9 @@ public class UserServlet extends HttpServlet {
 
         UserDao userdao = new UserDao();
         boolean flag = userdao.CreateUser(usermodel);
-        String data = "ÕËºÅ»òÃÜÂë´íÎó";
 
         if (!flag) {
-            request.setAttribute("errorMsg", data);
+            request.setAttribute("message", "ç”¨æˆ·åå·²è¢«å ç”¨");
             request.getRequestDispatcher("/student/Login/CreateUser.jsp").forward(request, response);
         } else {
             RequestDispatcher rd = request.getRequestDispatcher("/student/Login/Login.jsp");
@@ -82,7 +79,7 @@ public class UserServlet extends HttpServlet {
         boolean flag = userdao.ForgetUser(usermodel);
 
         if (!flag) {
-            request.setAttribute("message", "²éÕÒ²»µ½ÓÃ»§");
+            request.setAttribute("message", "æŸ¥æ‰¾ä¸åˆ°ç”¨æˆ·");
             request.getRequestDispatcher("/student/Login/ForgetPassword.jsp?Username="+Username+"").forward(request, response);
         } else {
             RequestDispatcher rd = request.getRequestDispatcher("/student/Login/ChangePassword.jsp?Username="+Username+"");
@@ -102,7 +99,7 @@ public class UserServlet extends HttpServlet {
         if (flag) {
             response.sendRedirect("student/Login/Login.jsp");
         } else {
-            System.out.println("¸ü¸ÄÊ§°Ü");
+            System.out.println("æ›´æ”¹å¤±è´¥");
         }
     }
 }

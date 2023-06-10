@@ -60,7 +60,7 @@ public class StudentServlet extends HttpServlet {
         if (flag) {
             response.sendRedirect("student/Query/index.jsp");
         } else {
-            System.out.println("Ìí¼ÓÊ§°Ü");
+            System.out.println("æ·»åŠ å¤±è´¥");
         }
     }
 
@@ -79,11 +79,11 @@ public class StudentServlet extends HttpServlet {
         studentModel.SetJspScore(jspScore);
 
         boolean flag = studentDAO.ChangeStudent(studentModel);
-        //Ìø×ª
+        //è·³è½¬
         if (flag) {
             response.sendRedirect("student/Query/index.jsp");
         } else {
-            System.out.println("¸ü¸ÄÊ§°Ü");
+            System.out.println("æ›´æ”¹å¤±è´¥");
         }
     }
 
@@ -96,11 +96,11 @@ public class StudentServlet extends HttpServlet {
         studentModel.SetId(id);
 
         boolean flag = studentDAO.DeleteStudent(studentModel);
-        //Ìø×ª
+        //è·³è½¬
         if (flag) {
             response.sendRedirect("student/Query/index.jsp");
         } else {
-            System.out.println("É¾³ýÊ§°Ü");
+            System.out.println("åˆ é™¤å¤±è´¥");
         }
     }
 
@@ -112,7 +112,7 @@ public class StudentServlet extends HttpServlet {
             response.sendRedirect("student/Query/index.jsp");
         }
         else {
-            System.out.println("É¾³ýÊ§°Ü");
+            System.out.println("åˆ é™¤å¤±è´¥");
         }
     }
 }

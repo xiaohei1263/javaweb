@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@page isELIgnored="false"%>
 <html>
 <head>
     <title>登录</title>
@@ -17,7 +18,7 @@
 </head>
 <script>
     let v = decodeURI('${cookie.username.value}');
-    document.getElementById("username").value = v;
+    document.getElementById("message").value = v;
 </script>
 
 <body>
@@ -43,7 +44,7 @@
 
                     <input type="password" name="Password" class="login_form_1"/>
 
-                    <p style='color:red'>${errorMsg }</p>
+                    <p style='color:red'>${message }</p>
 
                     <input type="submit" value="登录" class="login_form_2"/>
 
