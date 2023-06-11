@@ -27,7 +27,7 @@
 <div class="query_div_2">
     <div class="query_div_3">
         <form action="<%= path %>/StudentServlet" method="get">
-            <table id="tb_2">
+            <table>
                 <tr>
                     <th>学号：</th>
                     <td>
