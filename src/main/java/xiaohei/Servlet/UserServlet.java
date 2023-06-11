@@ -54,6 +54,14 @@ public class UserServlet extends HttpServlet {
     protected void doCreateUser(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String Username = request.getParameter("Username");
         String Password = request.getParameter("Password");
+        if(Username.equals("")){
+            request.setAttribute("message", "账号不能为空");
+            request.getRequestDispatcher("/student/Login/CreateUser.jsp").forward(request, response);
+        }
+        if(Password.equals("")){
+            request.setAttribute("message", "密码不能为空");
+            request.getRequestDispatcher("/student/Login/CreateUser.jsp").forward(request, response);
+        }
         UserModel usermodel = new UserModel();
         usermodel.SetUsername(Username);
         usermodel.SetPassword(Password);

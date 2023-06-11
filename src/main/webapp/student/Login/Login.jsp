@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<%@page isELIgnored="false"%>
+<%@page isELIgnored="false" %>
 <html>
 <head>
     <title>登录</title>
@@ -35,14 +35,18 @@
                 <label>
                     昵称或邮箱
                 </label>
-                <input type="text" name="Username" class="login_form_1"/>
+                <label>
+                    <input type="text" name="Username" class="login_form_1"/>
+                </label>
 
                 <div class="login_div_5">
                     <label class="login_label_1">
                         密码
                     </label>
 
-                    <input type="password" name="Password" class="login_form_1"/>
+                    <label>
+                        <input type="password" name="Password" class="login_form_1"/>
+                    </label>
 
                     <p style='color:red'>${message }</p>
 

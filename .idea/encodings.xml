@@ -7,6 +7,8 @@
     <file url="file://$PROJECT_DIR$/src/main/java/xiaohei/Servlet/StudentServlet.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/xiaohei/Servlet/UserServlet.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/student/css/Login.css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/student/css/style.css" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
