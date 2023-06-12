@@ -88,9 +88,9 @@ public class UserServlet extends HttpServlet {
 
         if (!flag) {
             request.setAttribute("message", "查找不到用户");
-            request.getRequestDispatcher("/student/Login/ForgetPassword.jsp?Username="+Username+"").forward(request, response);
+            request.getRequestDispatcher("/student/Login/ForgetPassword.jsp?Username=" + Username + "").forward(request, response);
         } else {
-            RequestDispatcher rd = request.getRequestDispatcher("/student/Login/ChangePassword.jsp?Username="+Username+"");
+            RequestDispatcher rd = request.getRequestDispatcher("/student/Login/ChangePassword.jsp?Username=" + Username + "");
             rd.forward(request, response);
         }
     }
