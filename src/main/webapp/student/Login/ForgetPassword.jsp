@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<%@page isELIgnored="false"%>
+<%@page isELIgnored="false" %>
 <html>
 <head>
     <title>Title</title>
@@ -32,29 +32,41 @@
                 <label class="login_label_1">
                     Username or email address
                 </label>
-
-                <label>
-                    <input type="text" name="Username" class="login_form_1"/>
-                </label>
-
+                <div class="login_div_7">
+                    <label>
+                        <input type="text" name="Username" class="login_form_1"/>
+                        <span class="bottom"></span>
+                        <span class="right"></span>
+                        <span class="top"></span>
+                        <span class="left"></span>
+                    </label>
+                </div>
                 <div class="login_div_5">
                     <label class="login_label_1">
                         邮箱:
                     </label>
-
-                    <label>
-                        <input type="password" class="login_form_3"/>
-                    </label>
-
+                    <div class="login_div_7">
+                        <label>
+                            <input type="password" class="login_form_3"/>
+                            <span class="bottom"></span>
+                            <span class="right"></span>
+                            <span class="top"></span>
+                            <span class="left"></span>
+                        </label>
+                    </div>
                     <input type="button" id="btn" class="login_form_4" value="获取验证码" onclick="settime(this)"/>
                     <label>
                         验证码:
                     </label>
-
-                    <label>
-                        <input type="text" class="login_form_1"/>
-                    </label>
-
+                    <div class="login_div_7">
+                        <label>
+                            <input type="text" class="login_form_1"/>
+                            <span class="bottom"></span>
+                            <span class="right"></span>
+                            <span class="top"></span>
+                            <span class="left"></span>
+                        </label>
+                    </div>
                 </div>
                 <input type="submit" value="确认" class="login_form_2"/>
                 <div>${message}</div>

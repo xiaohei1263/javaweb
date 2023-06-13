@@ -35,19 +35,28 @@
                 <label>
                     昵称或邮箱
                 </label>
-                <label>
-                    <input type="text" name="Username" class="login_form_1"/>
-                </label>
-
+                <div class="login_div_7">
+                    <label>
+                        <input type="text" name="Username" class="login_form_1"/>
+                        <span class="bottom"></span>
+                        <span class="right"></span>
+                        <span class="top"></span>
+                        <span class="left"></span>
+                    </label>
+                </div>
                 <div class="login_div_5">
                     <label class="login_label_1">
                         密码
                     </label>
-
-                    <label>
-                        <input type="password" name="Password" class="login_form_1"/>
-                    </label>
-
+                    <div class="login_div_7">
+                        <label>
+                            <input type="password" name="Password" class="login_form_1"/>
+                            <span class="bottom"></span>
+                            <span class="right"></span>
+                            <span class="top"></span>
+                            <span class="left"></span>
+                        </label>
+                    </div>
                     <p style='color:red'>${message }</p>
 
                     <input type="submit" value="登录" class="login_form_2"/>

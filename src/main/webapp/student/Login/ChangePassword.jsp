@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<%@page isELIgnored="false"%>
+<%@page isELIgnored="false" %>
 <html>
 <head>
     <title>忘记密码</title>
@@ -53,14 +53,25 @@
                         密码:
                         <span id="length"></span>
                     </label>
-                    <input type="password" id="pw" name="Password" placeholder="密码(不少于6位)"
-                           onkeyup="checkpassword()" class="login_form_1">
+                    <div class="login_div_7">
+                        <input type="password" id="pw" name="Password" placeholder="密码(不少于6位)"
+                               onkeyup="checkpassword()" class="login_form_1">
+                        <span class="bottom"></span>
+                        <span class="right"></span>
+                        <span class="top"></span>
+                        <span class="left"></span>
+                    </div>
                     <label class="login_label_1">
                         确认密码:
                     </label>
-                    <input type="password" id="repw" name="repassword" placeholder="密码(不少于6位)"
-                           onkeyup="checkpassword()" class="login_form_1">
-
+                    <div class="login_div_7">
+                        <input type="password" id="repw" name="repassword" placeholder="密码(不少于6位)"
+                               onkeyup="checkpassword()" class="login_form_1">
+                        <span class="bottom"></span>
+                        <span class="right"></span>
+                        <span class="top"></span>
+                        <span class="left"></span>
+                    </div>
                     <span id="diff"></span>
 
                     <input type="submit" id="submit" value="确定" class="login_form_2"/>
