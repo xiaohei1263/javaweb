@@ -54,8 +54,10 @@
                         <span id="length"></span>
                     </label>
                     <div class="login_div_7">
-                        <input type="password" id="pw" name="Password" placeholder="密码(不少于6位)"
-                               onkeyup="checkpassword()" class="login_form_1">
+                        <label for="pw">
+                            <input type="password" id="pw" name="Password" placeholder="密码(不少于6位)"
+                                   onkeyup="checkpassword()" class="login_form_1">
+                        </label>
                         <span class="bottom"></span>
                         <span class="right"></span>
                         <span class="top"></span>
@@ -65,8 +67,10 @@
                         确认密码:
                     </label>
                     <div class="login_div_7">
-                        <input type="password" id="repw" name="repassword" placeholder="密码(不少于6位)"
-                               onkeyup="checkpassword()" class="login_form_1">
+                        <label for="repw">
+                            <input type="password" id="repw" name="repassword" placeholder="密码(不少于6位)"
+                                   onkeyup="checkpassword()" class="login_form_1">
+                        </label>
                         <span class="bottom"></span>
                         <span class="right"></span>
                         <span class="top"></span>
