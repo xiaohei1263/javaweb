@@ -87,7 +87,15 @@ a {
 .right {
     right: 0;
 }
+@keyframes animate {
+    0% {
+        background-position-x: 0;
+    }
 
+    100% {
+        background-position-x: 300px;
+    }
+}
 
 input:focus ~ .top,
 input:focus ~ .bottom {
@@ -105,8 +113,12 @@ input:focus ~ .right {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, #bb114a, #e5e521, #008dff, #37b922, #ff1b69);
+    background: linear-gradient(90deg, #ff0069, #e5e546, #69b0e1, #8dff7c, #ff1b69);
     animation: animate 2s linear infinite;
+}
+
+.clear {
+    clear: both;
 }
 
 .login_div_7 input:valid~span::before,

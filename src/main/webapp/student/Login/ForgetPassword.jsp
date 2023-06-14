@@ -32,7 +32,7 @@
                 <label class="login_label_1">
                     Username or email address
                 </label>
-                <div class="login_div_7">
+                <div class="login_div_7" style="height: auto">
                     <label>
                         <input type="text" name="Username" class="login_form_1"/>
                         <span class="bottom"></span>
@@ -53,8 +53,11 @@
                             <span class="top"></span>
                             <span class="left"></span>
                         </label>
+
+                            <input type="button" id="btn" class="login_form_4" value="获取验证码"
+                                   onclick="settime(this)"/>
+                            <div class="clear"></div>
                     </div>
-                    <input type="button" id="btn" class="login_form_4" value="获取验证码" onclick="settime(this)"/>
                     <label>
                         验证码:
                     </label>
